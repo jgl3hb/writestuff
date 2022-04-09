@@ -13,11 +13,11 @@ def load_user(user_id):
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
-
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
+    posts = db.relationship('Note', backref='author', lazy=True)
 
     def __init__(self, email, username, password):
         self.email = email
@@ -45,4 +45,4 @@ class Note(db.Model):
         self.user_id = user_id
     
     def __repr__(self):
-        return f"Note ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
+        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
