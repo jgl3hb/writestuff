@@ -3,3 +3,18 @@ from flask_login import current_user, login_required
 from myapp import db 
 from myapp.models import Note
 from myapp.notes.forms import NoteForm
+
+notes = Blueprint('notes', __name__)
+
+@notes.route('/create', methods=['GET', 'POST'])
+@login_required
+def create_note():
+    form = NoteForm()
+    if form.validate_on_submit():
+        note = Note(title=form.title.data, text=form.text.data, user_id=current_user.id)
+        db.session.add(note)
+        db.session.commit()
+        flash('Note Created')
+        print('Note was created')
+        return redirect(url_for('core.index'))
+    return render_template('create_note.html', form=form)
