@@ -46,3 +46,16 @@ def update(note_id):
         form.text.data = note.text
 
     return render_template('create_note.html',title='Updating',form=form)
+
+@notes.route('/<int:note_id>/delete',methods=['GET','POST'])
+@login_required
+def delete_note(note_id):
+
+    note = Note.query.get_or_404(note_id)
+    if note.author != current_user:
+        abort(403)
+
+    db.session.delete(note)
+    db.session.commit()
+    flash('Note Deleted')
+    return redirect(url_for('core.index'))
