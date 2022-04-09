@@ -19,7 +19,30 @@ def create_note():
         return redirect(url_for('core.index'))
     return render_template('create_note.html', form=form)
 
-    @notes.route('/<int:note_id>')
+@notes.route('/<int:note_id>')
 def note(note_id):
     note = Note.query.get_or_404(note_id) 
     return render_template('note.html', title=note.title, date=note.date, post=note)
+
+@notes.route('/<int:note_id>/update',methods=['GET','POST'])
+@login_required
+def update(note_id):
+    note = Note.query.get_or_404(note_id)
+
+    if note.author != current_user:
+        abort(403)
+
+    form = NoteForm()
+
+    if form.validate_on_submit():
+        note.title = form.title.data
+        note.text = form.text.data
+        db.session.commit()
+        flash('Note Updated')
+        return redirect(url_for('notes.note',note_id=note.id))
+
+    elif request.method == 'GET':
+        form.title.data = note.title
+        form.text.data = note.text
+
+    return render_template('create_note.html',title='Updating',form=form)
