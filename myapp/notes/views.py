@@ -22,7 +22,7 @@ def create_note():
 @notes.route('/<int:note_id>')
 def note(note_id):
     note = Note.query.get_or_404(note_id) 
-    return render_template('note.html', title=note.title, date=note.date, post=note)
+    return render_template('note.html', title=note.title, date=note.date, note=note)
 
 @notes.route('/<int:note_id>/update',methods=['GET','POST'])
 @login_required

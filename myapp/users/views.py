@@ -71,7 +71,7 @@ def account():
 
     return render_template('account.html', form=form)
 
-    @users.route('/<username>')
+@users.route('/<username>')
 def user_notes(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
