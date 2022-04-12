@@ -4,16 +4,6 @@ body {
   background-image: url('https://wallpaperaccess.com/full/4317845.jpg');
 }
 
-.car-boy {
-  text-align: center;
-  opacity: 100%;
-}
-
-
-h2 {
-  opacity: 100%
-}
-
 .jumbotron {
   color: darkslategray;
   opacity: 100%;
@@ -21,23 +11,19 @@ h2 {
 }
 
 .container {
-  opacity: 100%;
 }
 
-
-#card {
-  background-image: url('https://wallpaperaccess.com/full/4317845.jpg');
-  color: teal;
-  background-color: red;
-  opacity: 100%;
-  
+.card {
+  text-align: center;
+  color: black;
+  background-color: transparent;
+  border: none;
 }
 
 .card-title {
   color: purple;
   opacity: 100%;
 }
-
 
 #nav {
   text-align: center;
@@ -50,6 +36,14 @@ h2 {
 }
 
 #page-item {
-  background-color: red;
+  background-color: transparent;
   opacity: 100%;
 }
+
+/* .btn.btn-primary {
+  background-color: red;
+}
+
+pagination justify-content-center {
+  background-color: red;
+} */

@@ -10,14 +10,14 @@
 <div class="container">
     {% for note in notes.items %}
     <div class="card">
-        <div class="car-boy">
+        
             <h2>
                 <a class="card-title" href="{{url_for('notes.note', note_id=note.id)}}">{{note.title}}</a>
                 <a href="{{url_for('users.user_notes', username=note.author.username)}}">Author: {{note.author.username}}</a>
             </h2>
             <p>Published on: {{note.date.strftime('%Y - %m - %d')}}</p>
-            <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Notes</a>
-        </div>
+            <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Note</a>
+       
     </div>
     {% endfor %}
 </div>
