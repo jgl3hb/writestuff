@@ -1,0 +1,55 @@
+body {
+  border: 1px red;
+  color: orange;
+  background-image: url('https://wallpaperaccess.com/full/4317845.jpg');
+}
+
+.car-boy {
+  text-align: center;
+  opacity: 100%;
+}
+
+
+h2 {
+  opacity: 100%
+}
+
+.jumbotron {
+  color: darkslategray;
+  opacity: 100%;
+  text-align: center;
+}
+
+.container {
+  opacity: 100%;
+}
+
+
+#card {
+  background-image: url('https://wallpaperaccess.com/full/4317845.jpg');
+  color: teal;
+  background-color: red;
+  opacity: 100%;
+  
+}
+
+.card-title {
+  color: purple;
+  opacity: 100%;
+}
+
+
+#nav {
+  text-align: center;
+}
+
+.nav-link {
+  border: 1px red;
+  color: red;
+  opacity: 100%;
+}
+
+#page-item {
+  background-color: red;
+  opacity: 100%;
+}

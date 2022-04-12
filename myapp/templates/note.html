@@ -1,18 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+<br>
+<br>  
+<br>
+<br>
+<br>
+
 <div class="jumbotron">
   <h1>{{ note.title }}</h1>
   <h2>Written by: {{note.author.username}}</h2>
   <h3>Published: {{ note.date.strftime('%B %d, %Y') }}</h3>
   <p>{{note.text}}</p>
-   {% if note.author == current_user %}
-     <div>
-       <a class="btn btn-secondary" href="{{ url_for('notes.update', note_id=note.id) }}">Update</a>
-       <br>
-       <form action="{{ url_for('notes.delete_note', note_id=note.id) }}" method="POST">
+  {% if note.author == current_user %}
+    <div>
+      <a class="btn btn-secondary" href="{{ url_for('notes.update', note_id=note.id) }}">Update</a>
+      <br>
+      <form action="{{ url_for('notes.delete_note', note_id=note.id) }}" method="POST">
         <input class="btn btn-danger" type="submit" value="Delete">
       </form>
-     </div>
-   {% endif %}
+    </div>
+  {% endif %}
 </div>
 {% endblock content %}

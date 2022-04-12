@@ -1,36 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>Welcome to WriteStuff</h1>
+<div class="jumbotron">
+    <h1>Welcome to WriteStuff</h1>
+</div>
+<li class="nav">
+    <a href="{{url_for('notes.create_note')}}">Create Note</a> 
+</li>
+<br>
+<div class="container">
+    {% for note in notes.items %}
+    <div class="card">
+        <div class="car-boy">
+            <h2>
+                <a class="card-title" href="{{url_for('notes.note', note_id=note.id)}}">{{note.title}}</a>
+                <a href="{{url_for('users.user_notes', username=note.author.username)}}">Author: {{note.author.username}}</a>
+            </h2>
+            <p>Published on: {{note.date.strftime('%Y - %m - %d')}}</p>
+            <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Notes</a>
+        </div>
     </div>
-    <div class="container">
-        {% for note in notes.items %}
-            <div class="card">
-                <div class="car-boy">
-                    <h2>
-                        <a class="card-title" href="{{url_for('notes.note', note_id=note.id)}}">{{note.title}}</a>
-                        <a href="{{url_for('users.user_notes', username=note.author.username)}}">Written by: {{note.author.username}}</a>
-                    </h2>
-                    <p>Published on: {{note.date.strftime('%Y - %m - %d')}}</p>
-                    <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Notes</a>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 
-    <nav aria-label="Page Navigation example">
-        <ul class="pagination justify-content-center">
-            {% for page_num in notes.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-                {% if notes.page == page_num %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
-                {% else %}
-                <li class="page-item">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
+<nav aria-label="Page Navigation example">
+    <ul class="pagination justify-content-center">
+        {% for page_num in notes.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if notes.page == page_num %}
+        <li class="page-item disabled">
+            <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+        </li>
+        {% else %}
+        <li class="page-item">
+            <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+        </li>
                 {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-{% endblock %}
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endblock %}
