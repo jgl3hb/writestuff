@@ -2,23 +2,22 @@
 {% block content %}
 <div class="jumbotron">
     <h1>Welcome to WriteStuff</h1>
+    <!-- <div class="create-nav">
+        <a href="{{url_for('notes.create_note')}}">Create Note</a> 
+    </div> -->
 </div>
-<li class="nav">
-    <a href="{{url_for('notes.create_note')}}">Create Note</a> 
-</li>
-<br>
 <div class="container">
     {% for note in notes.items %}
     <div class="card">
-        
             <h2>
                 <a class="card-title" href="{{url_for('notes.note', note_id=note.id)}}">{{note.title}}</a>
-                <a href="{{url_for('users.user_notes', username=note.author.username)}}">Author: {{note.author.username}}</a>
+                <br>
+                <!-- <a class="card-author" href="{{url_for('users.user_notes', username=note.author.username)}}">Author: {{note.author.username}}</a> -->
             </h2>
-            <p>Published on: {{note.date.strftime('%Y - %m - %d')}}</p>
-            <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Note</a>
-       
+            <p>Edited: {{note.date.strftime('%d-%m-%Y')}}</p>
+            <!-- <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Note</a> -->
     </div>
+    <br>
     {% endfor %}
 </div>
 

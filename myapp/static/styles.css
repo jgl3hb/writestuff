@@ -1,6 +1,6 @@
 body {
   border: 1px red;
-  color: orange;
+  color: black;
   background-image: url('https://wallpaperaccess.com/full/4317845.jpg');
 }
 
@@ -11,21 +11,38 @@ body {
 }
 
 .container {
+  background-color: transparent;
+}
+
+.form-group {
+  padding-top: 100px;
+  border: none;
+  background-color: transparent;
 }
 
 .card {
-  text-align: center;
+  padding: 5px;
+  padding-top: 25px;
+  text-align: left;
   color: black;
+  text-decoration: underline;
   background-color: transparent;
   border: none;
 }
 
 .card-title {
-  color: purple;
+  color: black;
   opacity: 100%;
+  text-decoration: none;
 }
 
-#nav {
+.card-author {
+  color: purple;
+  opacity: 100%;
+  text-decoration: none;
+}
+
+.create-nav {
   text-align: center;
 }
 
@@ -40,10 +57,28 @@ body {
   opacity: 100%;
 }
 
-/* .btn.btn-primary {
+.page-link {
+  position: absolute;
+  bottom: 10px;
+}
+
+.form-control-label { 
+  background-color: transparent;
+}
+
+.input-form-lg {
+  background-color: red;
+}
+
+.form-control-lg {
+  border: 10px black
+  background-color: red;
+}
+
+.btn.btn-primary {
   background-color: red;
 }
 
 pagination justify-content-center {
   background-color: red;
-} */
+} 
