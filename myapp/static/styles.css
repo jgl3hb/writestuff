@@ -48,7 +48,7 @@ body {
 
 .nav-link {
   border: 1px red;
-  color: red;
+  color: pink;
   opacity: 100%;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .input-form-lg {
-  background-color: red;
+  background-color: pink;
 }
 
 .form-control-lg {
@@ -76,9 +76,18 @@ body {
 }
 
 .btn.btn-primary {
-  background-color: red;
+  background-color: pink;
 }
 
 pagination justify-content-center {
-  background-color: red;
+  background-color: pink;
 } 
+
+.btn.btn-danger {
+  background-color: #ffb6c1;
+  border: #ffb6c1;
+}
+
+.btn.btn-secondary {
+  
+}

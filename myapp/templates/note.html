@@ -7,10 +7,10 @@
   <p>{{note.text}}</p>
   {% if note.author == current_user %}
     <div>
-      <a class="btn btn-secondary" href="{{ url_for('notes.update', note_id=note.id) }}">Update</a>
+      <a class="btn btn-secondary" href="{{ url_for('notes.update', note_id=note.id) }}">Rewrite</a>
       <br>
       <form action="{{ url_for('notes.delete_note', note_id=note.id) }}" method="POST">
-        <input class="btn btn-danger" type="submit" value="Delete">
+        <input class="btn btn-danger" type="submit" value="Erase">
       </form>
     </div>
   {% endif %}
