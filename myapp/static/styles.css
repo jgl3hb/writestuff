@@ -8,6 +8,7 @@ body {
   color: darkslategray;
   opacity: 100%;
   text-align: center;
+  padding-top: 110px;
 }
 
 .container {
@@ -84,10 +85,11 @@ pagination justify-content-center {
 } 
 
 .btn.btn-danger {
-  background-color: #ffb6c1;
+  background-color: #eabfd5;
   border: #ffb6c1;
+  color: #ce5171;
 }
 
 .btn.btn-secondary {
-  
+
 }

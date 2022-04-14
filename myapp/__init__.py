@@ -18,7 +18,11 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 
 # set up connection to db
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB')
+
+# set up connection to db
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB')
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/blog"
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
