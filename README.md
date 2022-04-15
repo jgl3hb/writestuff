@@ -3,6 +3,10 @@
 
 Centralizing all your team notepads and desktop note apps into a web app
 
+<img src="https://i.imgur.com/GNQdojG.png"  width="720" height="480">
+
+
+
 
 ## Technologies Used:
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
