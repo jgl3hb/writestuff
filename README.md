@@ -5,6 +5,7 @@ Centralizing all your team notepads and desktop note apps into a web app
 
 <img src="https://i.imgur.com/GNQdojG.png"  width="720" height="480">
 
+<img src="https://i.imgur.com/x1DOwOw.png"  width="720" height="480">
 
 
 
