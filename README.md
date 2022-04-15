@@ -1,7 +1,7 @@
-WriteStuff - A simple note-taking app
+[WriteStuff](https://writestuff-jgl.herokuapp.com/) - A simple note-taking app
 
-Centralizing all your notepads and desktop note apps into a web app
 
+Centralizing all your team notepads and desktop note apps into a web app
 
 
 ## Technologies Used:
@@ -15,3 +15,6 @@ Centralizing all your notepads and desktop note apps into a web app
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+Icebox Items
+-Private notes

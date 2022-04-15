@@ -7,9 +7,27 @@ body {
 .jumbotron {
   color: darkslategray;
   opacity: 100%;
-  text-align: center;
-  padding-top: 110px;
+  text-align: left;
+  padding-top: 75px;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.nav {
+  justify-content: space-around;
+  width: 1000px;
+  padding-left: 75px;
+  color: darkslategray;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px; 
+}
+
+a {
+  color: darkslategray;
+  text-decoration: none;
+  font-weight: bold;
+  }
 
 .container {
   background-color: transparent;
@@ -25,14 +43,15 @@ body {
   padding: 5px;
   padding-top: 25px;
   text-align: left;
-  color: black;
-  text-decoration: underline;
+  color: darkslategray;
+  text-decoration: none;
   background-color: transparent;
   border: none;
+  right: 50px;
 }
 
 .card-title {
-  color: black;
+  color: darkslategray;
   opacity: 100%;
   text-decoration: none;
 }
@@ -45,12 +64,6 @@ body {
 
 .create-nav {
   text-align: center;
-}
-
-.nav-link {
-  border: 1px red;
-  color: pink;
-  opacity: 100%;
 }
 
 #page-item {
@@ -67,19 +80,6 @@ body {
   background-color: transparent;
 }
 
-.input-form-lg {
-  background-color: pink;
-}
-
-.form-control-lg {
-  border: 10px black
-  background-color: red;
-}
-
-.btn.btn-primary {
-  background-color: pink;
-}
-
 pagination justify-content-center {
   background-color: pink;
 } 
@@ -88,8 +88,4 @@ pagination justify-content-center {
   background-color: #eabfd5;
   border: #ffb6c1;
   color: #ce5171;
-}
-
-.btn.btn-secondary {
-
 }
