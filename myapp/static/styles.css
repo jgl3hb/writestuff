@@ -33,6 +33,10 @@ a {
   background-color: transparent;
 }
 
+p {
+  padding-top: 20px;
+}
+
 .form-group {
   padding-top: 100px;
   border: none;
