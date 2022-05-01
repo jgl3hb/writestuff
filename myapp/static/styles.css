@@ -1,3 +1,112 @@
+@media only screen and (max-width: 768px) {
+  body {
+    display: grid;
+    text-align: left;
+    width: 250px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "header header"
+      "side content"
+      "footer footer";    
+  }
+  
+  .jumbotron {
+    color: darkslategray;
+    opacity: 100%;
+    text-align: left;
+    padding-top: 75px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav {
+    justify-content: space-around;
+    color: darkslategray;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px; 
+  }
+  
+  a {
+    color: darkslategray;
+    text-decoration: none;
+    font-weight: bold;
+    }
+  
+  .container {
+    background-color: transparent;
+  }
+  
+  h1, h2, h3, p {
+    display: grid;
+    text-align: left;
+    width: 250px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+  }
+  
+  .form-group {
+    padding-top: 100px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .card {
+    padding: 5px;
+    padding-top: 25px;
+    text-align: left;
+    color: darkslategray;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    right: 50px;
+  }
+  
+  .card-title {
+    color: darkslategray;
+    opacity: 100%;
+    text-decoration: none;
+  }
+  
+  .card-author {
+    color: purple;
+    opacity: 100%;
+    text-decoration: none;
+  }
+  
+  .create-nav {
+    text-align: center;
+  }
+  
+  #page-item {
+    background-color: transparent;
+    opacity: 100%;
+  }
+  
+  .page-link {
+    position: absolute;
+    bottom: 10px;
+  }
+  
+  .form-control-label { 
+    background-color: transparent;
+  }
+  
+  pagination justify-content-center {
+    background-color: pink;
+  } 
+  
+  .btn.btn-danger {
+    background-color: #eabfd5;
+    border: #ffb6c1;
+    color: #ce5171;
+  }
+  
+}
+
+
 body {
   border: 1px red;
   color: black;
