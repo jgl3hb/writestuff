@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="jumbotron">
     <h1>WriteStuff</h1>
-    <!-- <div class="create-nav">
-        <a href="{{url_for('notes.create_note')}}">Create Note</a> 
-    </div> -->
 </div>
+
 <div class="container">
+    {% if current_user.id %}
     {% for note in notes.items %}
     <div class="card">
+        {% if note.user_id == current_user.id %}
             <h2>
                 <a class="card-title" href="{{url_for('notes.note', note_id=note.id)}}">{{note.title}}</a>
                 <br>
-                <!-- <a class="card-author" href="{{url_for('users.user_notes', username=note.author.username)}}">Author: {{note.author.username}}</a> -->
             </h2>
             <p>Edited: {{note.date.strftime('%d-%m-%Y')}}</p>
-            <!-- <a class="btn btn-primary" href="{{url_for('notes.note', note_id=note.id)}}">Read Note</a> -->
+    {% endif %}
     </div>
     <br>
     {% endfor %}
+    {% else %}
+    <div class="home-message">
+        <div class="landing-page-message">
+            <p class="landing-page-p">A simple note-taking app</p>
+        </div> 
+    </div>
+    {% endif %}
 </div>
 
 <nav aria-label="Page Navigation example">
